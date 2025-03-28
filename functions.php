@@ -13,7 +13,6 @@ function addProduct($name, $description, $price, $image) {
     } else {
         echo "Error: " . $stmt->error;
     }
-
     $stmt->close();
     $conn->close();
 }

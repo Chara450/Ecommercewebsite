@@ -1,0 +1,1 @@
+CREATE TABLE `ecommerce_db`.`products` (`id` INT(255) NOT NULL AUTO_INCREMENT , `name` VARCHAR(64) NOT NULL , `description` VARCHAR(255) NULL , `price` INT(255) NOT NULL , `image` VARCHAR(255) NULL , PRIMARY KEY (`id`)) ENGINE = InnoDB;

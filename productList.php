@@ -1,44 +1,4 @@
 <?php
-require 'db/connection.php';
-
-// Create: Add a new product
-function addProduct($name, $description, $price, $image) {
-    require_once 'db/connection.php';
-    $conn = connectDB();
-    $stmt = $conn->prepare("INSERT INTO products (name, description, price, image) VALUES (?, ?, ?, ?)");
-    $stmt->bind_param("ssis", $name, $description, $price, $image);
-
-    if ($stmt->execute()) {
-        echo "Product added successfully!";
-    } else {
-        echo "Error: " . $stmt->error;
-    }
-
-    $stmt->close();
-    $conn->close();
-}
-
-// Read: Get all products
-require 'db/connection.php';
-
-// Create: Add a new product
-function addProduct($name, $description, $price, $image) {
-    require_once 'db/connection.php';
-    $conn = connectDB();
-    $stmt = $conn->prepare("INSERT INTO products (name, description, price, image) VALUES (?, ?, ?, ?)");
-    $stmt->bind_param("ssis", $name, $description, $price, $image);
-
-    if ($stmt->execute()) {
-        echo "Product added successfully!";
-    } else {
-        echo "Error: " . $stmt->error;
-    }
-
-    $stmt->close();
-    $conn->close();
-}
-
-// Read: Get all products
 function getProducts() {
     return [
         [
